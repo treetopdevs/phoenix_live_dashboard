@@ -11,9 +11,10 @@ jobs:
     name: mix test (OTP ${{matrix.otp}} | Elixir ${{matrix.elixir}})
     strategy:
       matrix:
+        platform: [ubuntu-latest, windows-latest]
         otp: [21.x, 22.x]
         elixir: [1.7.x, 1.8.x, 1.9.x, 1.10.x]
-    runs-on: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-elixir@v1.2.0
@@ -30,7 +31,10 @@ jobs:
 
   npm_test:
     name: npm test
-    runs-on: [ubuntu-latest, windows-latest]
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-elixir@v1.2.0
