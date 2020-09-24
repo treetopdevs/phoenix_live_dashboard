@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "title": "Live view",
+    "owner": "Me"
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Treetopdevs"
+      }
+    ],
+    "diagrams": [
+      {
+        "title": "Yeah",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "Me"
+  }
+}
